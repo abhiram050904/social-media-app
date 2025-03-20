@@ -21,7 +21,7 @@ app.use("/",express.static("uploads"))
 app.use(cookieParser())
 app.use(helmet())
 app.use(cors({
-    origin:['http://localhost:3000','https://social-media-app-chi-lilac.vercel.app'],
+    origin:['http://localhost:3000','https://social-media-app-chi-lilac.vercel.app','https://social-media-7ohbvaq35-abhirams-projects-02c97ae6.vercel.app'],
     credentials:true,
 }))
 app.use(express.static(path.join(__dirname,'public')))
