@@ -117,7 +117,7 @@ const Login = () => {
           </form>
 
           <h1 className='mt-4 text-lg text-gray-800'>
-            DON'T have an account?{" "}
+            DON&apos;T have an account?{" "}
             <Link href='/auth/signup'>
               <span className='text-blue-800 underline cursor-pointer font-medium'>
                 Signup Here

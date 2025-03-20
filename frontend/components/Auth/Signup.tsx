@@ -12,7 +12,6 @@ import { toast } from 'sonner'
 import { useDispatch, useSelector } from 'react-redux'
 import { setAuthUser } from '@/store/authSlice'
 import { useRouter } from 'next/navigation'
-import { RootState } from '@/store/store'
 
 interface FormData {
   username: string
