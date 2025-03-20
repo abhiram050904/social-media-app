@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 import { Dialog, DialogClose, DialogContent, DialogTitle, DialogTrigger } from '../ui/dialog';
 import { Button } from '../ui/button';
 import Link from 'next/link';
-import { useFollowUnfollow } from '../hooks/use-auth';
 import axios from 'axios';
 import { BASE_URL } from '@/server';
 import { User } from '@/types';
@@ -15,7 +14,7 @@ type Props = {
   followers: string[] | undefined;
 };
 
-const Followers = ({ user, followers }: Props) => {
+const Followers = ({ followers }: Props) => {
   const [followerUsers, setFollowerUsers] = useState<User[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 

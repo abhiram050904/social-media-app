@@ -14,7 +14,7 @@ type Props = {
   following: string[] | undefined;
 };
 
-const Following = ({ user, following }: Props) => {
+const Following = ({ following }: Props) => {
   const [followingUsers, setFollowingUsers] = useState<User[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 

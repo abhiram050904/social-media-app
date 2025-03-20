@@ -2,7 +2,6 @@ import { User } from '@/types'
 import { Heart, MessageCircle } from 'lucide-react'
 import Image from 'next/image'
 import React from 'react'
-import Comment from '../Helper/Comment'
 type Props={
     userProfile:User | undefined
 }
