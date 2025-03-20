@@ -22,7 +22,7 @@ const Post = ({userProfile}:Props) => {
                             <span>{post.likes.length}</span>
                         </button>
                         <button className='p-2 rounded-full text-white space-x-2 flex items-center font-bold'>
-                            <Comment post={post} user={userProfile}/>
+                            <MessageCircle className='w-7 h-7' />
                             <span>{post.comments.length}</span>
                         </button>
                     </div>

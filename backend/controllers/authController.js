@@ -49,6 +49,10 @@ const signup = async (req, res, next) => {
             return next(new AppError("Email already registered", 400));
         }
 
+        if (password.length < 8) {
+            return next(new AppError("Password must be at least 8 characters long", 400));
+        }
+
         const otp = generateOtp();
         const otpExpires = Date.now() + 24 * 60 * 60 * 1000; 
 
