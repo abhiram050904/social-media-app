@@ -126,7 +126,7 @@ const Feed = () => {
           <div className='mt-3 flex items-center justify-between'>
             <div className='flex items-center space-x-4'>
               <HeartIcon onClick={()=>{handleLikeDislike(post._id)}} className={`cursor-pointer ${user?._id && post.likes.includes(user._id) ? 'text-red-500' :""}`} />
-              <MessageCircle className='cursor-pointer'/>
+              <Comment post={post} user={user}/>
               <Send className='cursor-pointer'/>
             </div>
 
@@ -136,7 +136,6 @@ const Feed = () => {
             {post.likes.length}likes
           </h1>
           <p className='mt-2 font-medium'>{post.caption}</p>
-          <Comment post={post} user={user}/>
           <div className='mt-2 flex items-center'>
             <input type='text' placeholder='Add a Comment...' className='flex-1 placeholder:text-gray-800 outline-none' value={comments} onChange={(e)=>setComments(e.target.value)}/>
             <p role='button' className='text-sm font-semibold text-blue-700 cursor-pointer' onClick={()=>handleComment(post._id)}>Post</p>

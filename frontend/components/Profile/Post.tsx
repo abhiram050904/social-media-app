@@ -2,6 +2,7 @@ import { User } from '@/types'
 import { Heart, MessageCircle } from 'lucide-react'
 import Image from 'next/image'
 import React from 'react'
+import Comment from '../Helper/Comment'
 type Props={
     userProfile:User | undefined
 }
@@ -21,7 +22,7 @@ const Post = ({userProfile}:Props) => {
                             <span>{post.likes.length}</span>
                         </button>
                         <button className='p-2 rounded-full text-white space-x-2 flex items-center font-bold'>
-                            <MessageCircle className='w-7 h-7'/>
+                            <Comment post={post} user={userProfile}/>
                             <span>{post.comments.length}</span>
                         </button>
                     </div>

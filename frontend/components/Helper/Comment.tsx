@@ -11,6 +11,7 @@ import { BASE_URL } from '@/server'
 import { addComment } from '@/store/postSlice'
 import axios from 'axios'
 import { toast } from 'sonner'
+import { MessageCircle } from 'lucide-react'
 
 type Props={
     user:User | null
@@ -45,7 +46,7 @@ const Comment = ({post,user}:Props) => {
     <div>
      <Dialog>
         <DialogTrigger>
-            <p className='mt-2 text-sm font-semibold'>view All {post?.comments.length} Comments</p>
+            <MessageCircle/>
         </DialogTrigger>
         <DialogContent className='max-w-8xl p-0 gap-0 flex flex-col'>
             <DialogTitle></DialogTitle>
